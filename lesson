@@ -1,0 +1,625 @@
+Last login: Tue Apr 12 20:30:52 on ttys000
+You have mail.
+➜  ~ ls
+127.0.0.1 wit-ams-cloudservice.cloudapp.net
+Adlm
+Applications
+Applications (Parallels)
+Creative Cloud Files
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+OneDrive
+Parallels
+Pictures
+Public
+Python
+Spitfire
+Yandex.Disk-GeorgeBerdyansky.localized
+Yandex.Disk-ed.dzerzhanovsky.localized
+Yandex.Disk.localized
+poop
+➜  ~ cd poop
+➜  poop ls
+test
+➜  poop mkdir aaaa
+➜  poop ls
+aaaa test
+➜  poop cd aaaa
+➜  aaaa ls
+➜  aaaa git init
+Initialized empty Git repository in /Users/denis/poop/aaaa/.git/
+➜  aaaa git:(master) echo "rooki nogi" >>test.txt
+➜  aaaa git:(master) ✗ ls
+test.txt
+➜  aaaa git:(master) ✗ cat test.txt
+rooki nogi
+➜  aaaa git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  aaaa git:(master) ✗ git add test.txt
+➜  aaaa git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   test.txt
+
+➜  aaaa git:(master) ✗ git commit -m ""this my first git commit; my changes: cre
+at and add file test.txt"
+dquote>
+➜  aaaa git:(master) ✗ git commit -m "this my first git commit; my changes: creat and add file test.txt"
+[master (root-commit) 73feb96] this my first git commit; my changes: creat and add file test.txt
+ Committer: Denis Stepanov <denis@Deonis.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+➜  aaaa git:(master) git remote add origin https://github.com/sinedpets/aaaa.git
+➜  aaaa git:(master) gitpush -u origin master
+zsh: command not found: gitpush
+➜  aaaa git:(master) git push -u origin master
+Username for 'https://github.com': sinedpets
+Password for 'https://sinedpets@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/sinedpets/aaaa.git/'
+➜  aaaa git:(master) cd
+➜  ~ mkdir .ssh
+➜  ~ cd .ssh
+➜  .ssh ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/denis/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/denis/.ssh/id_rsa
+Your public key has been saved in /Users/denis/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:2nMtN5ujGAbewcblkvxsiiwyG7WvhM+Jld3C9+wn8Mo denis@Deonis.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|                 |
+|          .      |
+|       + +       |
+|    . . S .      |
+|   o * B.= .     |
+|  o = * Oo* +    |
+|  oB.+ * Xooo+   |
+|  o+=o+ Eo=+o.   |
++----[SHA256]-----+
+➜  .ssh ls
+id_rsa     id_rsa.pub
+➜  .ssh cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+➜  .ssh cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDksvttnyztVIfuoONekRVmITZcw6NpiLrieJ91UVu1fftVWTL01SNUBE0CzCc/zlj97UgCUWh3qnnEw84ijBI3xyk09qH4fxlG7tVMbleL3HmaOJFX6xYrkUOoSq/wOf+hZTv1aJhRzjs2GvVqIL5sKCaoke5V5I3fQmMdPHI82x2N4/i4nJ+XgF3iLzmVIzi3V9DH34QbqtNFD5nd2DfCRU80Wr4N8wXrq4Xt0DWW3Il4hoNQ5lysE8AQEqNJfNuCVdvF2RpeZlUWHXOFovYJzx0e5JaMhq6vPRXHgyyq/zmZ/9wQU/aLd+7d7O3WZ4YyN1SBtZrDGj6TJGVdn19f9QFk8hIDmMKNWo9ZlO6mh/yoNQ5rORLmlirOqsI1Hg2d21qSW3KGHQzTsMKnFCEoAQO6T/tAfl/ViFMH0HBFQY1S57n6WLdlAWtXa9VbjnKsyfKIBtGiewl3/8wtq/yPi7R7QR1Gt+gPe6IPWVaX94dNLt5HeBoduhWxA6klbr8= denis@Deonis.local
+➜  .ssh cd
+➜  ~ ls
+127.0.0.1 wit-ams-cloudservice.cloudapp.net OneDrive
+Adlm                                        Parallels
+Applications                                Pictures
+Applications (Parallels)                    Public
+Creative Cloud Files                        Python
+Desktop                                     Spitfire
+Documents                                   Yandex.Disk-GeorgeBerdyansky.localized
+Downloads                                   Yandex.Disk-ed.dzerzhanovsky.localized
+Library                                     Yandex.Disk.localized
+Movies                                      poop
+Music
+➜  ~ poop
+➜  poop ls
+aaaa test
+➜  poop aaaa
+➜  aaaa git:(master) git push -u origin master
+Username for 'https://github.com': sinedpets
+Password for 'https://sinedpets@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/sinedpets/aaaa.git/'
+➜  aaaa git:(master) св
+zsh: command not found: св
+➜  aaaa git:(master) св
+zsh: command not found: св
+➜  aaaa git:(master) cd
+➜  ~ cd
+➜  ~ .ssh
+➜  .ssh ls
+id_rsa     id_rsa.pub
+➜  .ssh rm id_rsa id_rsa.pub
+➜  .ssh ls
+➜  .ssh ssh-keygen -t rsa -b 4096 -C "denis--st96@mail.ru"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/denis/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/denis/.ssh/id_rsa
+Your public key has been saved in /Users/denis/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:WB4Zt/emuy+l8GDx4yroE+MmdvXYIL2y6C1vEA9HmvY denis--st96@mail.ru
+The key's randomart image is:
++---[RSA 4096]----+
+|        . .      |
+|      .  + .     |
+|     +  + . .    |
+|    * .+ ... .   |
+|   . *..S  o  o  |
+|    . E + + oo.  |
+|     o * B =.+   |
+|    +oO + o =.   |
+|   ooO=+ ...o+.  |
++----[SHA256]-----+
+➜  .ssh cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5671r37TXsUzjavrIdMLcg1dp+YyvgLUIoOEIvlp6bce1c3S6+HPm3iPmpf4xFgp+efygJdr0ImlFK/1wjaUWE10J02Wt+Jwyq8j0Ih1/9AzSvZp5t4KpyXu6H8gmLLEGCZ4l9Xk9Sy0I6HbPOm95MpaqW7bBTQT/EcsborPTNcoFcWUWWH0MncUq2hYfiUtXdgLPD+mdqGwuprgvEgYs0z3ymE27iJuY0PJowIKTgCJ+J0BdikNDbXKGHCA28ioZPZhT6oUEOvlZZ5RFsUEhRUpEV7UCK/WDILYUzG/bxh3X26Vv0DsmHnf2XRwJXSBo1MdV35AIkThLO0TT8zuJk8w+hzIO+8R1aGOSO3L+HhASv4IlVDnlDnz7CMbIIjahbdsoA+UBzg98bl97aLuHO4IROK8tfny7FjS8z+KzWxEfQHrucfvkFB8S2JLpbfKsHLc8oqKTYL6QRp7vFIZaik/S3MLgYCB3ul5GS/uzZxkzd8gOvB380tqGHQ95f8ly1jGbCiwrNlsYD0MAuGTfu8S3HlwYopw1gEMf+AIBZUUOcxObks1ObCAy0CAZxYljqe1jEiK3xXbCm1qYeHFusycFFAme7lvmHPXk9KHjhK5R0aHNcVQxDAtVbsQRLkyYd9rTgylmR+Ez+LY1WQUGZYMxg/eLughO1YA5bw1CSw== denis--st96@mail.ru
+➜  .ssh cd ../poop/aaaa
+➜  aaaa git:(master) git push -u origin master
+Username for 'https://github.com': ^C
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master) git push -u origin master
+Username for 'https://github.com': ^C
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master) ssh -T -p 443 git@ssh.github.com
+The authenticity of host '[ssh.github.com]:443 ([140.82.121.35]:443)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[ssh.github.com]:443' (ED25519) to the list of known hosts.
+Hi sinedpets! You've successfully authenticated, but GitHub does not provide shell access.
+➜  aaaa git:(master) git push -u origin master
+Username for 'https://github.com': ^C
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master) ssh -T -p 443 git@ssh.github.com
+Hi sinedpets! You've successfully authenticated, but GitHub does not provide shell access.
+# This is Git's per-user configuration file.
+➜  aaaa git:(master) git branch -M main
+
+➜  aaaa git:(main)
+➜  aaaa git:(main) g status
+On branch main
+nothing to commit, working tree clean
+➜  aaaa git:(main) g push -u origin main
+Username for 'https://github.com': ^C
+➜  aaaa git:(main)
+➜  aaaa git:(main)
+➜  aaaa git:(main)
+➜  aaaa git:(main)
+➜  aaaa git:(main) cd ..
+➜  poop rm aaaa
+rm: aaaa: is a directory
+➜  poop rm -r aaaa
+override r--r--r--  denis/staff for aaaa/.git/objects/73/feb96020dc94131b490a9cc237e7c0318dad1e? ^C
+➜  poop
+➜  poop
+➜  poop rm -rf aaaa
+➜  poop git clone https://github.com/sinedpets/aaaa.git
+Cloning into 'aaaa'...
+warning: You appear to have cloned an empty repository.
+➜  poop cd aaaa
+➜  aaaa git:(master) echo "fsfe" >> test
+➜  aaaa git:(master) ✗ git add .
+➜  aaaa git:(master) ✗ git commit -m "test"
+[master (root-commit) a301389] test
+ Committer: Denis Stepanov <denis@Deonis.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test
+➜  aaaa git:(master) git xonfig --global --edit
+git: 'xonfig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+➜  aaaa git:(master) git config --global --edit
+➜  aaaa git:(master) git config --global --edit
+➜  aaaa git:(master) g push
+Username for 'https://github.com': ^C
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+➜  aaaa git:(master)
+GIT(1)                                Git Manual                                GIT(1)
+
+
+
+NAME
+       git - the stupid content tracker
+
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>]
+           <command> [<args>]
+
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an unusually
+       rich command set that provides both high-level operations and full access to
+       internals.
+
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful minimum
+       set of commands. The Git User’s Manual[1] has a more in-depth introduction.
+
+       After you mastered the basic concepts, you can come back to this page to learn
+       what commands Git offers. You can learn more about individual Git commands with
+       "git help command". gitcli(7) manual page gives you an overview of the
+       command-line command syntax.
+
+       A formatted and hyperlinked copy of the latest Git documentation can be viewed
+       at https://git.github.io/htmldocs/git.html or https://git-scm.com/docs.
+
+OPTIONS
+       --version
+           Prints the Git suite version that the git program came from.
+
+       --help
+           Prints the synopsis and a list of the most commonly used commands. If the
+           option --all or -a is given then all available commands are printed. If a
+           Git command is named this option will bring up the manual page for that
+           command.
+
+           Other options are available to control how the manual page is displayed.
+           See git-help(1) for more information, because git --help ... is converted
+           internally into git help ....
+
+       -C <path>
+           Run as if git was started in <path> instead of the current working
+           directory. When multiple -C options are given, each subsequent non-absolute
+           -C <path> is interpreted relative to the preceding -C <path>. If <path> is
+           present but empty, e.g.  -C "", then the current working directory is left
+           unchanged.
+
+           This option affects options that expect path name like --git-dir and
+           --work-tree in that their interpretations of the path names would be made
+           relative to the working directory caused by the -C option. For example the
+           following invocations are equivalent:
+
+               git --git-dir=a.git --work-tree=b -C c status
+               git --git-dir=c/a.git --work-tree=c/b status
+
+       -c <name>=<value>
+           Pass a configuration parameter to the command. The value given will
+           override values from configuration files. The <name> is expected in the
+           same format as listed by git config (subkeys separated by dots).
+
+           Note that omitting the = in git -c foo.bar ... is allowed and sets foo.bar
+           to the boolean true value (just like [foo]bar would in a config file).
+           Including the equals but with an empty value (like git -c foo.bar= ...)
+           sets foo.bar to the empty string which git config --type=bool will convert
+           to false.
+
+       --exec-path[=<path>]
+           Path to wherever your core Git programs are installed. This can also be
+           controlled by setting the GIT_EXEC_PATH environment variable. If no path is
+           given, git will print the current setting and then exit.
+
+       --html-path
+           Print the path, without trailing slash, where Git’s HTML documentation is
+           installed and exit.
+
+       --man-path
+           Print the manpath (see man(1)) for the man pages for this version of Git
+           and exit.
+
+       --info-path
+           Print the path where the Info files documenting this version of Git are
+           installed and exit.
+
+       -p, --paginate
+           Pipe all output into less (or if set, $PAGER) if standard output is a
+           terminal. This overrides the pager.<cmd> configuration options (see the
+           "Configuration Mechanism" section below).
+
+       -P, --no-pager
+           Do not pipe Git output into a pager.
+
+       --git-dir=<path>
+           Set the path to the repository. This can also be controlled by setting the
+           GIT_DIR environment variable. It can be an absolute path or relative path
+           to current working directory.
+
+       --work-tree=<path>
+           Set the path to the working tree. It can be an absolute path or a path
+           relative to the current working directory. This can also be controlled by
+           setting the GIT_WORK_TREE environment variable and the core.worktree
+           configuration variable (see core.worktree in git-config(1) for a more
+           detailed discussion).
+
+       --namespace=<path>
+           Set the Git namespace. See gitnamespaces(7) for more details. Equivalent to
+           setting the GIT_NAMESPACE environment variable.
+
+       --super-prefix=<path>
+           Currently for internal use only. Set a prefix which gives a path from above
+           a repository down to its root. One use is to give submodules context about
+           the superproject that invoked it.
+
+       --bare
+           Treat the repository as a bare repository. If GIT_DIR environment is not
+           set, it is set to the current working directory.
+
+       --no-replace-objects
+           Do not use replacement refs to replace Git objects. See git-replace(1) for
+           more information.
+
+       --literal-pathspecs
+           Treat pathspecs literally (i.e. no globbing, no pathspec magic). This is
+           equivalent to setting the GIT_LITERAL_PATHSPECS environment variable to 1.
+
+       --glob-pathspecs
+           Add "glob" magic to all pathspec. This is equivalent to setting the
+           GIT_GLOB_PATHSPECS environment variable to 1. Disabling globbing on
+           individual pathspecs can be done using pathspec magic ":(literal)"
+
+       --noglob-pathspecs
+           Add "literal" magic to all pathspec. This is equivalent to setting the
+           GIT_NOGLOB_PATHSPECS environment variable to 1. Enabling globbing on
+           individual pathspecs can be done using pathspec magic ":(glob)"
+
+       --icase-pathspecs
+           Add "icase" magic to all pathspec. This is equivalent to setting the
+           GIT_ICASE_PATHSPECS environment variable to 1.
+
+       --no-optional-locks
+           Do not perform optional operations that require locks. This is equivalent
+           to setting the GIT_OPTIONAL_LOCKS to 0.
+
+       --list-cmds=group[,group...]
+           List commands by group. This is an internal/experimental option and may
+           change or be removed in the future. Supported groups are: builtins,
+           parseopt (builtin commands that use parse-options), main (all commands in
+           libexec directory), others (all other commands in $PATH that have git-
+           prefix), list-<category> (see categories in command-list.txt), nohelpers
+           (exclude helper commands), alias and config (retrieve command list from
+           config variable completion.commands)
+
+GIT COMMANDS
+       We divide Git into high level ("porcelain") commands and low level ("plumbing")
+       commands.
+
+HIGH-LEVEL COMMANDS (PORCELAIN)
+       We separate the porcelain commands into the main commands and some ancillary
+       user utilities.
+
+   Main porcelain commands
+       git-add(1)
+           Add file contents to the index.
+
+       git-am(1)
+           Apply a series of patches from a mailbox.
+
+       git-archive(1)
+           Create an archive of files from a named tree.
+
+       git-bisect(1)
+           Use binary search to find the commit that introduced a bug.
+
+       git-branch(1)
+           List, create, or delete branches.
+
+       git-bundle(1)
+           Move objects and refs by archive.
+
+       git-checkout(1)
+           Switch branches or restore working tree files.
+
+       git-cherry-pick(1)
+           Apply the changes introduced by some existing commits.
+
+       git-citool(1)
+           Graphical alternative to git-commit.
+
+       git-clean(1)
+           Remove untracked files from the working tree.
+
+       git-clone(1)
+           Clone a repository into a new directory.
+
+       git-commit(1)
+           Record changes to the repository.
+
+       git-describe(1)
+           Give an object a human readable name based on an available ref.
+
+       git-diff(1)
+           Show changes between commits, commit and working tree, etc.
+
+       git-fetch(1)
+           Download objects and refs from another repository.
+
+       git-format-patch(1)
+           Prepare patches for e-mail submission.
+
+       git-gc(1)
+           Cleanup unnecessary files and optimize the local repository.
+
+       git-grep(1)
+           Print lines matching a pattern.
+
+       git-gui(1)
+           A portable graphical interface to Git.
+
+       git-init(1)
+           Create an empty Git repository or reinitialize an existing one.
+
+       git-log(1)
+           Show commit logs.
+
+       git-merge(1)
+           Join two or more development histories together.
+
+       git-mv(1)
+           Move or rename a file, a directory, or a symlink.
+
+       git-notes(1)
+           Add or inspect object notes.
+
+       git-pull(1)
+           Fetch from and integrate with another repository or a local branch.
+
+       git-push(1)
+           Update remote refs along with associated objects.
+
+       git-range-diff(1)
+           Compare two commit ranges (e.g. two versions of a branch).
+
+       git-rebase(1)
+           Reapply commits on top of another base tip.
+
+       git-reset(1)
+           Reset current HEAD to the specified state.
+
+       git-restore(1)
+           Restore working tree files.
+
+       git-revert(1)
+           Revert some existing commits.
+
+       git-rm(1)
+           Remove files from the working tree and from the index.
+
+       git-shortlog(1)
+           Summarize git log output.
+
+       git-show(1)
+           Show various types of objects.
+
+       git-stash(1)
+           Stash the changes in a dirty working directory away.
+➜  aaaa git:(master) git remote set-url origin git@github.com:sinedpets/aaaa.git
+➜  aaaa git:(master) g push
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:1: [ssh.github.com]:443
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 213 bytes | 213.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:sinedpets/aaaa.git
+ * [new branch]      master -> master
+➜  aaaa git:(master) code .
+➜  aaaa git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+➜  aaaa git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  aaaa git:(master) ✗ git add  .
+➜  aaaa git:(master) ✗ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   test
+
+➜  aaaa git:(master) ✗ git commit -m "modified test"
+[master 62d45c9] modified test
+ 1 file changed, 1 insertion(+)
+➜  aaaa git:(master) git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:sinedpets/aaaa.git
+   a301389..62d45c9  master -> master
+➜  aaaa git:(master) man git commit
+No manual entry for commit
+➜  aaaa git:(master) git aad .
+git: 'aad' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+➜  aaaa git:(master) ✗ git add .
+➜  aaaa git:(master) ✗ to
